@@ -10,6 +10,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
   -- { import = "astrocommunity.code-runner.molten-nvim" },
   -- import/override with your plugins folder
 }
