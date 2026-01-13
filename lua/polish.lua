@@ -9,7 +9,7 @@ require("neo-tree").setup {
       visible = true,
       hide_gitignored = false,
       hide_dotfiles = false,
-      never_show = { ".git" },
+      never_show = { ".git", "__pycache__" },
     },
   },
 }
