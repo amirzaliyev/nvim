@@ -12,5 +12,9 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.editing-support.nvim-origami" },
+  -- { import = "astrocommunity.lsp.lsp-lens-nvim" },
+  -- { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.pack.full-dadbod" },
   -- import/override with your plugins folder
 }

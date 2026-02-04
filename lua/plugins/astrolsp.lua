@@ -48,6 +48,24 @@ return {
       ruff = {
         settings = {},
       },
+      basedpyright = {
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+        settings = {
+          analysis = {
+            autoImportCompletions = true,
+            typeCheckingMode = "basic",
+            diagnosticMode = "workspace",
+            indexing = true,
+            autoSearchPaths = true,
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
