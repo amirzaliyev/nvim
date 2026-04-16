@@ -11,6 +11,24 @@ vim.keymap.set("n", "<F3>", ":DBUIAddConnection<CR>", { desc = "Add new db conne
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 
+-- Replicate nvim-origami's removed keepFoldsAcrossSessions feature
+vim.api.nvim_create_autocmd("BufWinLeave", {
+  pattern = "?*",
+  callback = function()
+    if vim.bo.filetype ~= "" and vim.bo.buftype == "" then
+      vim.cmd("silent! mkview")
+    end
+  end,
+})
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "?*",
+  callback = function()
+    if vim.bo.filetype ~= "" and vim.bo.buftype == "" then
+      vim.cmd("silent! loadview")
+    end
+  end,
+})
+
 require("neo-tree").setup {
   filesystem = {
     filtered_items = {

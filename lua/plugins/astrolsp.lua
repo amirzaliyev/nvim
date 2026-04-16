@@ -46,7 +46,12 @@ return {
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
       ruff = {
-        settings = {},
+        settings = {
+          lint = {
+            ignore = { "F401", "F841" }, -- unused imports/variables, covered by basedpyright
+          },
+          organizeImports = true,
+        },
       },
       basedpyright = {
         capabilities = {
